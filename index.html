@@ -119,6 +119,38 @@
 			<!--END PORTFOLIO ELEMENT JLite Program-->
 			<br />
 			<hr>
+			
+			<!--BEGIN PORTFOLIO ELEMENT Home Alarm Project-->
+			<h3>Home Alarm Project</h3>
+			<div class="uk-container-expand">
+				<div class="uk-grid-small uk-child-width-expand@s uk-grid-divider uk-text-center" uk-grid>
+					<div><span uk-icon="icon: info"></span> <span class="uk-text-middle">A <span title="Raspberry Pi" uk-tooltip><u class="info">RPi</u></span> Home Alarm</span></div>
+					<div><span uk-icon="icon: code"></span> <span class="uk-text-middle">Written in C</span></div>
+					<div><span uk-icon="icon: users"></span> <span class="uk-text-middle">Team of 2</span></div>
+					<div><span uk-icon="icon: github-alt"></span> <a href="https://github.com/kdomasze/Home-Alarm-Project"><span class="uk-text-middle">Source on GitHub</span></a></div>
+				</div>
+			</div>
+			<h4>Description and Responsibility</h4>
+			<div class="uk-container-expand">
+				<p>
+					This project's goal was to create a home alarm system using a Raspberry Pi and our own custom circuit. The project called for reading data from a few analog sensors (thermistor and light dependent resister) and activating a buzzer when specific cutoff values were exceeded. Responsibility was not split and all development was done as a pair.
+				</p>
+			</div>
+			<h4>Design Process</h4>
+			<div class="uk-container-expand">
+				<p>
+					To begin the project, we worked to read values directly from the ADC. Since the ADC used the SPI protocol, we first did some research into how to utilize it. Once we understood the protocol, we wrote a test program to read data from the ADC which was reading data from a potentiometer.
+				</p>
+				<p>
+					Once we verified that the interface between the ADC and the RPi was good, we moved to expand the code to support one sensor. We initially hard coded the cut-off value for the sensor to ease development. Once we confirmed that the first sensor was working, we added functionality for the system to automatically detect a cutoff depending on the current temperature it senses at start up.
+				</p>
+				<p>
+					After this initial system was working, we added in the second sensor and the buzzer to complete the full alarm.
+				</p>
+			</div>
+			<!--END PORTFOLIO ELEMENT Home Alarm Project-->
+			<br />
+			<hr>
 		</div>
 		
 		<!-- BEGIN Chess Main Menu Screenshot Modal -->
