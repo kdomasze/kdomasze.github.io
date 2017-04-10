@@ -4,9 +4,14 @@
         <title>Kyle Domaszewicz Portfolio</title>
         <link rel="stylesheet" href="css/uikit.min.css" />
 		<link rel="stylesheet" href="css/main.css" />
+		
+		<link rel="stylesheet" href="http://vjs.zencdn.net/5.19.1/video-js.css">
+		
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
+		
+		<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     </head>
     <body>
 		<!--BEGIN HEADER-->
@@ -151,6 +156,89 @@
 			<!--END PORTFOLIO ELEMENT Home Alarm Project-->
 			<br />
 			<hr>
+			
+			<!--BEGIN PORTFOLIO ELEMENT Image Lab-->
+			<h3>Image Lab</h3>
+			<div class="uk-container-expand">
+				<div class="uk-grid-small uk-child-width-expand@s uk-grid-divider uk-text-center" uk-grid>
+					<div><span uk-icon="icon: info"></span> <span class="uk-text-middle">A set of <span title="Digital Image Processing" uk-tooltip><u class="info">DIP</u></span> operations</span></div>
+					<div><span uk-icon="icon: code"></span> <span class="uk-text-middle">Written in C</span></div>
+					<div><span uk-icon="icon: users"></span> <span class="uk-text-middle">Solo</span></div>
+					<div><span uk-icon="icon: github-alt"></span> <a href="https://github.com/kdomasze/Image-Labs"><span class="uk-text-middle">Source on GitHub</span></a></div>
+				</div>
+			</div>
+			<h4>Description and Responsibility</h4>
+			<div class="uk-container-expand">
+				<p>
+					Excluding the first project, these projects aimed to apply a series of Digital Image Processing (DIP) operations to an input image (of the <span title="Portable Pixel Map" uk-tooltip><u class="info">PPM</u></span> format) and output those operations to a new file (of the same PPM format). Each project built on the last and ultimately built to processing a video file.
+				</p>
+				<p>
+					In addition, both the image and video portions of the project had us generating a fractal structure and outputing it both as a single image and as an animated video.
+				</p>
+			</div>
+			<h4>Design Process</h4>
+			<div class="uk-container-expand">
+				<p>
+					Due to these being much smaller projects and each one designed to build towards the next, the majority of my design decisions rested on properly researching the functions and finding a method of implementation.
+				</p>
+			</div>
+			<!-- BEGIN SCREENSHOTS -->
+			<h4>Screenshots</h4>
+			<div class="uk-child-width-1-5@m uk-grid-small uk-grid-match" uk-grid>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#dip-source" uk-toggle><img src="./img/dip/UCI_Peter.jpg" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#dip-sharpen" uk-toggle><img src="./img/dip/sharpen.jpg" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#dip-poster" uk-toggle><img src="./img/dip/poster.jpg" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#dip-noise" uk-toggle><img src="./img/dip/noise.jpg" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#dip-hmirror" uk-toggle><img src="./img/dip/hmirror.jpg" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#dip-edge" uk-toggle><img src="./img/dip/edge.jpg" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#dip-bw" uk-toggle><img src="./img/dip/bw.jpg" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#dip-aging" uk-toggle><img src="./img/dip/aging.jpg" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#dip-overlay" uk-toggle><img src="./img/dip/overlayturkey.jpg" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#dip-juliaset" uk-toggle><img src="./img/dip/juliaset.jpg" /></a>
+					</div>
+				</div>
+			</div>
+			<!-- END SCREENSHOTS -->
+			<!--END PORTFOLIO ELEMENT Chess Program-->
+			<br />
 		</div>
 		
 		<!-- BEGIN Chess Main Menu Screenshot Modal -->
@@ -578,5 +666,166 @@ kdomasze% ./a.out
 			</div>
 		</div>
 		<!-- END Chess Black Checkmate Screenshot Modal -->
+		
+		<!-- BEGIN DIP Source Screenshot Modal -->
+		<div id="dip-source" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Source Image</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/dip/UCI_Peter.jpg" />
+				</div>
+			</div>
+		</div>
+		<!-- END DIP Source Screenshot Modal -->
+		
+		<!-- BEGIN DIP sharpen Screenshot Modal -->
+		<div id="dip-sharpen" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Sharpened Image</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/dip/sharpen.jpg" />
+				</div>
+			</div>
+		</div>
+		<!-- END DIP sharpen Screenshot Modal -->
+		
+		<!-- BEGIN DIP poster Screenshot Modal -->
+		<div id="dip-poster" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Posterized Image</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/dip/poster.jpg" />
+				</div>
+			</div>
+		</div>
+		<!-- END DIP poster Screenshot Modal -->
+		
+		<!-- BEGIN DIP noise Screenshot Modal -->
+		<div id="dip-noise" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Noise Added to Image</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/dip/noise.jpg" />
+				</div>
+			</div>
+		</div>
+		<!-- END DIP noise Screenshot Modal -->
+		
+		<!-- BEGIN DIP hmirror Screenshot Modal -->
+		<div id="dip-hmirror" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Horizontally Mirrored Image</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/dip/hmirror.jpg" />
+				</div>
+			</div>
+		</div>
+		<!-- END DIP hmirror Screenshot Modal -->
+		
+		<!-- BEGIN DIP edge Screenshot Modal -->
+		<div id="dip-edge" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Edge Detected Image</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/dip/edge.jpg" />
+				</div>
+			</div>
+		</div>
+		<!-- END DIP edge Screenshot Modal -->
+		
+		<!-- BEGIN DIP bw Screenshot Modal -->
+		<div id="dip-bw" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Black and White Image</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/dip/bw.jpg" />
+				</div>
+			</div>
+		</div>
+		<!-- END DIP bw Screenshot Modal -->
+		
+		<!-- BEGIN DIP aging Screenshot Modal -->
+		<div id="dip-aging" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Aged Image</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/dip/aging.jpg" />
+				</div>
+			</div>
+		</div>
+		<!-- END DIP aging Screenshot Modal -->
+		
+		<!-- BEGIN DIP overlay Screenshot Modal -->
+		<div id="dip-overlay" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Image Overlayed on Another Image</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/dip/overlayturkey.jpg" />
+				</div>
+			</div>
+		</div>
+		<!-- END DIP overlay Screenshot Modal -->
+		
+		<!-- BEGIN DIP juliaset Screenshot Modal -->
+		<div id="dip-juliaset" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Julia Set</h2>
+				</div>
+				<div class="uk-modal-body">
+					<ul class="uk-subnav uk-subnav-pill" uk-switcher="connect: .dip-julia">
+						<li><a href="#">Image</a></li>
+						<li><a href="#">Video</a></li>
+					</ul>
+					<ul class="uk-switcher dip-julia uk-margin">
+						<li>
+							<img src="./img/dip/juliaset.jpg" />
+						</li>
+						<li>
+							<video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+							  poster="./img/dip/juliaset.jpg" data-setup="{}">
+								<source src="./vid/dip/juliaset.mp4" type='video/mp4'>
+								<source src="./vid/dip/juliaset.webm" type='video/webm'>
+								<p class="vjs-no-js">
+								  To view this video please enable JavaScript, and consider upgrading to a web browser that
+								  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+								</p>
+							</video>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- END DIP juliaset Screenshot Modal -->
+		
+		<script src="http://vjs.zencdn.net/5.19.1/video.js"></script>
     </body>
 </html>
