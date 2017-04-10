@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Kyle Domaszewicz Portfolio</title>
         <link rel="stylesheet" href="css/uikit.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/uikit.min.js"></script>
@@ -10,16 +10,146 @@
     <body>
 		<!--BEGIN HEADER-->
 		<div class="uk-container">
-				<h1 class="uk-heading-primary uk-heading-divider">Hello, World!</h1>
+				<h1 class="uk-heading-primary uk-heading-divider">Kyle Domaszewicz</h1>
 		</div>
 		<!--END HEADER-->
-		<br />
-		
+		<br /><br /><br />
+		<!--BEGIN BODY-->
 		<div class="uk-container uk-container-small">
-			<h2 class="uk-heading-line uk-text-center"><span>Hello, World!</span></h2>
-			<div class="uk-grid-small" uk-grid>
-				<div>This is some random text.</div>
+			<h2 class="uk-heading-line uk-text-center"><span>Portfolio</span></h2>
+			<!--BEGIN PORTFOLIO ELEMENT Chess Program-->
+			<h3>Chess Program</h3>
+			<div class="uk-container-expand">
+				<div class="uk-grid-small uk-child-width-expand@s uk-grid-divider uk-text-center" uk-grid>
+					<div><span uk-icon="icon: info"></span> A complete chess program</div>
+					<div><span uk-icon="icon: code"></span> Written in C</div>
+					<div><span uk-icon="icon: users"></span> Team of 7</div>
+					<div><span uk-icon="icon: github-alt"></span> <a href="https://github.com/kdomasze/Chess-Simulator-2014">Source available on GitHub</a></div>
+				</div>
+			</div>
+			<h4>Description and Responsibility</h4>
+			<div class="uk-container-expand">
+				<p>
+					This project's goal was to design and implement a complete chess program with an AI opponent in 5 weeks. My role in the project was to design and implement a UI for the game. My primary goal was to create a user interface that required as little modification of the main game in order to function properly.
+				</p>
+			</div>
+			<h4>Design Process</h4>
+			<div class="uk-container-expand">
+				<p>
+					Initially, I opted to create a text interface to quickly produce a workable output for my fellow team members to utilize while working on their own parts of the project. Once I had completed this task, I moved on to creating a graphical user interface. I opted to utilize the SDL 1.2 as per the suggestion of our professor. After spending some time reading the documentation and experimenting with SDL, I proceeded to implement the new GUI.
+				</p>
+				<p>
+					 To ensure the error checking and movement systems my teammates implemented were utilized, early on I designed the code to grab input information from the user and pass it to the core program. 
+				</p>
+				<p>
+					After deciding on a design for the UI, I began by implementing the GUI by drawing the chess board itself and aligning the chess pieces. Next, I spent some time working with the event system in SDL to capture mouse clicks from the user. Once I could capture the mouse clicks, I moved onto adding the logic for highlighting the places on the chess board the player selects (along with checks for illegal clicks on the board).
+				</p>
+				<p>
+					Once these core features were completed, I replaced the text-based UI with the graphical one for testing. Once I confirmed it was working as intended, I moved onto creating the menus throughout the program for game setup.
+				</p>
+			</div>
+			<!-- BEGIN SCREENSHOTS -->
+			<h4>Screenshots</h4>
+			<div class="uk-child-width-1-5@m uk-grid-small uk-grid-match" uk-grid>
+			<div>
+				<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+					<a href="#chess-main-menu" uk-toggle><img src="./img/chess/MainMenu.PNG" /></a>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+					<a href="#chess-choose-color" uk-toggle><img src="./img/chess/ChooseColor.PNG" /></a>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+					<a href="#chess-choose-difficulty" uk-toggle><img src="./img/chess/ChooseDifficulty.PNG" /></a>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+					<a href="#chess-game-in-progress" uk-toggle><img src="./img/chess/GameInProgress.PNG" /></a>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+					<a href="#chess-black-checkmate" uk-toggle><img src="./img/chess/BlackCheckmate.PNG" /></a>
+				</div>
 			</div>
 		</div>
+		</div>
+		<!-- END SCREENSHOTS -->
+		
+		<!-- BEGIN Chess Main Menu Screenshot Modal -->
+		<div id="chess-main-menu" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Main Menu</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/chess/MainMenu.PNG" />
+				</div>
+			</div>
+		</div>
+		<!-- END Chess Main Menu Screenshot Modal -->
+		
+		<!-- BEGIN Chess Choose Color Screenshot Modal -->
+		<div id="chess-choose-color" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Choose Player Color</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/chess/ChooseColor.PNG" />
+				</div>
+			</div>
+		</div>
+		<!-- END Chess Choose Color Screenshot Modal -->
+		
+		<!-- BEGIN Chess Choose Difficulty Screenshot Modal -->
+		<div id="chess-choose-difficulty" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Choose AI Difficulty</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/chess/ChooseDifficulty.PNG" />
+				</div>
+			</div>
+		</div>
+		<!-- END Chess Choose Difficulty Screenshot Modal -->
+		
+		<!-- BEGIN Chess Game in Progress Screenshot Modal -->
+		<div id="chess-game-in-progress" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Game in Progress</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/chess/GameInProgress.PNG" />
+				</div>
+			</div>
+		</div>
+		<!-- END Chess Game in Progress Screenshot Modal -->
+		
+		<!-- BEGIN Chess Black Checkmate Screenshot Modal -->
+		<div id="chess-black-checkmate" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Black Checkmate</h2>
+				</div>
+				<div class="uk-modal-body">
+					<img src="./img/chess/BlackCheckmate.PNG" />
+				</div>
+			</div>
+		</div>
+		<!-- END Chess Black Checkmate Screenshot Modal -->
+		
+		<!--END PORTFOLIO ELEMENT Chess Program-->
     </body>
 </html>
