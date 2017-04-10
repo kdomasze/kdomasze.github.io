@@ -5,13 +5,10 @@
         <link rel="stylesheet" href="css/uikit.min.css" />
 		<link rel="stylesheet" href="css/main.css" />
 		
-		<link rel="stylesheet" href="http://vjs.zencdn.net/5.19.1/video-js.css">
-		
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
-		
-		<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+		<script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
     </head>
     <body>
 		<!--BEGIN HEADER-->
@@ -810,14 +807,9 @@ kdomasze% ./a.out
 							<img src="./img/dip/juliaset.jpg" />
 						</li>
 						<li>
-							<video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
-							  poster="./img/dip/juliaset.jpg" data-setup="{}">
-								<source src="./vid/dip/juliaset.mp4" type='video/mp4'>
-								<source src="./vid/dip/juliaset.webm" type='video/webm'>
-								<p class="vjs-no-js">
-								  To view this video please enable JavaScript, and consider upgrading to a web browser that
-								  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-								</p>
+							<video poster="./img/dip/juliaset.jpg" width="542" height="428" controls preload>
+								<source src="./vid/dip/juliaset.mp4"></source> 
+								<source src="./vid/dip/juliaset.webm"></source> 
 							</video>
 						</li>
 					</ul>
@@ -825,7 +817,6 @@ kdomasze% ./a.out
 			</div>
 		</div>
 		<!-- END DIP juliaset Screenshot Modal -->
-		
-		<script src="http://vjs.zencdn.net/5.19.1/video.js"></script>
+
     </body>
 </html>
