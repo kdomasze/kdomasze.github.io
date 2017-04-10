@@ -3,6 +3,7 @@
     <head>
         <title>Kyle Domaszewicz Portfolio</title>
         <link rel="stylesheet" href="css/uikit.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
@@ -21,10 +22,10 @@
 			<h3>Chess Program</h3>
 			<div class="uk-container-expand">
 				<div class="uk-grid-small uk-child-width-expand@s uk-grid-divider uk-text-center" uk-grid>
-					<div><span uk-icon="icon: info"></span> A complete chess program</div>
-					<div><span uk-icon="icon: code"></span> Written in C</div>
-					<div><span uk-icon="icon: users"></span> Team of 7</div>
-					<div><span uk-icon="icon: github-alt"></span> <a href="https://github.com/kdomasze/Chess-Simulator-2014">Source available on GitHub</a></div>
+					<div><span uk-icon="icon: info"></span> <span class="uk-text-middle">A full chess program</span></div>
+					<div><span uk-icon="icon: code"></span> <span class="uk-text-middle">Written in C</span></div>
+					<div><span uk-icon="icon: users"></span> <span class="uk-text-middle">Team of 7</span></div>
+					<div><span uk-icon="icon: github-alt"></span> <a href="https://github.com/kdomasze/Chess-Simulator-2014"><span class="uk-text-middle">Source on GitHub</span></a></div>
 				</div>
 			</div>
 			<h4>Description and Responsibility</h4>
@@ -51,34 +52,74 @@
 			<!-- BEGIN SCREENSHOTS -->
 			<h4>Screenshots</h4>
 			<div class="uk-child-width-1-5@m uk-grid-small uk-grid-match" uk-grid>
-			<div>
-				<div class="uk-card uk-card-default uk-card-small uk-card-hover">
-					<a href="#chess-main-menu" uk-toggle><img src="./img/chess/MainMenu.PNG" /></a>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#chess-main-menu" uk-toggle><img src="./img/chess/MainMenu.PNG" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#chess-choose-color" uk-toggle><img src="./img/chess/ChooseColor.PNG" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#chess-choose-difficulty" uk-toggle><img src="./img/chess/ChooseDifficulty.PNG" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#chess-game-in-progress" uk-toggle><img src="./img/chess/GameInProgress.PNG" /></a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<a href="#chess-black-checkmate" uk-toggle><img src="./img/chess/BlackCheckmate.PNG" /></a>
+					</div>
 				</div>
 			</div>
-			<div>
-				<div class="uk-card uk-card-default uk-card-small uk-card-hover">
-					<a href="#chess-choose-color" uk-toggle><img src="./img/chess/ChooseColor.PNG" /></a>
+			<!-- END SCREENSHOTS -->
+			<!--END PORTFOLIO ELEMENT Chess Program-->
+			<br />
+			<hr>
+			
+			<!--BEGIN PORTFOLIO ELEMENT JLite Compiler-->
+			<h3>JLite Compiler</h3>
+			<div class="uk-container-expand">
+				<div class="uk-grid-small uk-child-width-expand@s uk-grid-divider uk-text-center" uk-grid>
+					<div><span uk-icon="icon: info"></span> <span class="uk-text-middle">A compiler for <span title="Java-Lite" uk-tooltip><u class="info">JLite</u></span></span></div>
+					<div><span uk-icon="icon: code"></span> <span class="uk-text-middle">Written in Java</span></div>
+					<div><span uk-icon="icon: users"></span> <span class="uk-text-middle">Team of 4</span></div>
+					<div><span uk-icon="icon: github-alt"></span> <a href="https://github.com/kdomasze/JLite-Compiler"><span class="uk-text-middle">Source on GitHub</span></a></div>
 				</div>
 			</div>
-			<div>
-				<div class="uk-card uk-card-default uk-card-small uk-card-hover">
-					<a href="#chess-choose-difficulty" uk-toggle><img src="./img/chess/ChooseDifficulty.PNG" /></a>
+			<h4>Description and Responsibility</h4>
+			<div class="uk-container-expand">
+				<p>
+					This project's goal was to create a compiler for a <a href="#jlite-more-information" uk-toggle>stripped down version</a> of Java in 10 weeks. Ultimately the compiler would take the JLite code and compile it to valid C code, which could then be compiled into a runnable executable. While we initally did have seperate roles in the project, we eventually ended up assisting each other with their parts of the project.
+				</p>
+			</div>
+			<h4>Design Process</h4>
+			<div class="uk-container-expand">
+				<p>
+					For the project, we were initially supplied with a parser for the compiler. We began by implementing a semantic check system into the program in order to ensure the input code was a valid JLite file. After finishing the semantic check system, we moved onto generating an Abstract Syntax Tree (AST) and building symbol tables for each method of the classes. From here, we were able to check for errors relating to the classes and methods.
+				</p>
+				<p>
+					Once we had tested and confirmed the AST was correctly generating and the error checks were working, we moved onto generating the Intermediate Representation (IR) from the AST. We used Three Address Code (essentially a generic assembly language) as our IR. Finally, from this IR, we were able to then generate the final C code.
+				</p>
+			</div>
+			<h4>Example</h4>
+			<div class="uk-child-width-1-5@m uk-grid-small uk-grid-match" uk-grid>
+				<div>
+					<div class="uk-card uk-card-default uk-card-small uk-card-body uk-card-hover">
+						<a href="#jlite-example-factorial" uk-toggle>Factorial</a>
+					</div>
 				</div>
 			</div>
-			<div>
-				<div class="uk-card uk-card-default uk-card-small uk-card-hover">
-					<a href="#chess-game-in-progress" uk-toggle><img src="./img/chess/GameInProgress.PNG" /></a>
-				</div>
-			</div>
-			<div>
-				<div class="uk-card uk-card-default uk-card-small uk-card-hover">
-					<a href="#chess-black-checkmate" uk-toggle><img src="./img/chess/BlackCheckmate.PNG" /></a>
-				</div>
-			</div>
+			<!--END PORTFOLIO ELEMENT JLite Program-->
+			<br />
+			<hr>
 		</div>
-		</div>
-		<!-- END SCREENSHOTS -->
 		
 		<!-- BEGIN Chess Main Menu Screenshot Modal -->
 		<div id="chess-main-menu" uk-modal="center: true">
@@ -150,6 +191,360 @@
 		</div>
 		<!-- END Chess Black Checkmate Screenshot Modal -->
 		
-		<!--END PORTFOLIO ELEMENT Chess Program-->
+		<!-- BEGIN JLite More Information Modal -->
+		<div id="jlite-more-information" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">JLite Information</h2>
+				</div>
+				<div class="uk-modal-body">
+					<p>JLite is a stripped down version of the Java language defined for use in our class. It had support for the following:</p>
+					<ul>
+						<li>Only 1 data type (integer)</li>
+						<li>Only 1 loop structure (while)</li>
+						<li>Support for inheritance</li>
+						<li>Support for explicity type conversion</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- END Chess Black Checkmate Screenshot Modal -->
+		
+		<!-- BEGIN JLite More Information Modal -->
+		<div id="jlite-example-factorial" class="uk-modal-container" uk-modal="center: true">
+			<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h2 class="uk-modal-title">Factorial Example</h2>
+				</div>
+				<div class="uk-modal-body">
+					<ul class="uk-subnav uk-subnav-pill" uk-switcher="connect: .jlite-main-switch">
+						<li><a href="#">JLite Input</a></li>
+						<li><a href="#">C Output</a></li>
+						<li><a href="#">Example Output</a></li>
+					</ul>
+					<ul class="uk-switcher jlite-main-switch uk-margin">
+						<li>
+							<pre class="uk-panel-scrollable uk-height-large">
+								<code>
+class fact {
+	int n;
+
+	void setNumber(int num) {
+		n = num;
+	}
+
+	int factRec(int num) {
+		if (num == 1) {
+			return 1;
+		}
+		
+		return (factRec(num - 1) * num);
+	}
+
+	int factIter() {
+		int i;
+		int f;
+
+		i = 1;
+		f = 1;
+
+		while (i < (n + 1)) {
+			f = f * i;
+			i = i + 1;
+		}
+
+		return f;
+	}
+
+	void main(System x) {
+		fact f=new fact();
+		
+		int i = x.input();
+		
+		f.setNumber(i);
+		x.output(f.factIter());
+	}
+}
+
+class factorial {
+	int x;
+}
+								</code>
+							</pre>
+						</li>
+						<li>
+						<!-- BEGIN sub-nav -->
+							<ul class="uk-subnav uk-subnav-pill" uk-switcher="connect: .jlite-sub-switch">
+								<li><a href="#">classdefs.h</a></li>
+								<li><a href="#">methodheaders.h</a></li>
+								<li><a href="#">structdefs.h</a></li>
+								<li><a href="#">virtualtable.h</a></li>
+								<li><a href="#">methods.c</a></li>
+							</ul>
+							<ul class="uk-switcher jlite-main-switch uk-margin">
+								<li>
+									<pre class="uk-panel-scrollable uk-height-large">
+										<code>
+struct System;
+struct fact;
+struct factorial;
+
+extern int classsize[];
+extern int supertypes[];
+
+struct System
+{
+	int type;
+};
+
+struct fact
+{
+	int type;
+	int n;
+};
+
+struct factorial
+{
+	int type;
+	int x;
+};
+										</code>
+									</pre>
+								</li>
+								<li>
+									<pre class="uk-panel-scrollable uk-height-large">
+										<code>
+#ifndef METHODHEADERS_H
+#define METHODHEADERS_H
+#include "structdefs.h"
+
+void System_output(struct System *this0, int out);
+
+void System_printInt(struct System *this0, int x);
+
+int System_input(struct System *this0);
+
+void System_printRecurse(struct System *this0, int x);
+
+void fact_main(struct fact *this0, struct System *x);
+
+int fact_factIter(struct fact *this0);
+
+int fact_factRec(struct fact *this0, int num);
+
+void fact_setNumber(struct fact *this0, int num);
+
+#endif
+
+										</code>
+									</pre>
+								</li>
+								<li>
+									<pre class="uk-panel-scrollable uk-height-large">
+										<code>
+#ifndef STRUCTDEFS_H
+#define STRUCTDEFS_H
+#include "classdefs.h"
+#define NUMCLASSES 3
+#endif
+										</code>
+									</pre>
+								</li>
+								<li>
+									<pre class="uk-panel-scrollable uk-height-large">
+										<code>
+void * virtualtable[]={ &System_output, &System_printInt, &System_input, &System_printRecurse, &fact_main,
+	 &fact_factIter, &fact_factRec, &fact_setNumber, 0, 0,
+	 0, 0};
+
+										</code>
+									</pre>
+								</li>
+								<li>
+									<pre class="uk-panel-scrollable uk-height-large">
+										<code>
+#include "methodheaders.h"
+#include "virtualtable.h"
+#include <runtime.h>
+
+int classsize[] = {sizeof(struct System), sizeof(struct fact), sizeof(struct factorial)};
+int supertypes[] = {-1, -1, -1};
+
+void System_printInt(struct System *this0, int x)
+{
+		int t2;
+	int t1;
+	int t3;
+	int t5;
+	int t4;
+	int t6;
+	int t7;
+
+	t2 = 0;
+	t1 = x == t2;
+if (!t1) 	goto L0;
+	t3 = 48;
+	((void (*)(struct System *, int))virtualtable[this0->type*4+0])((struct System*) this0, t3);
+	goto L3;
+	L0:
+	t5 = 0;
+	t4 = x < t5;
+if (!t4) 	goto L1;
+	t6 = 45;
+	((void (*)(struct System *, int))virtualtable[this0->type*4+0])((struct System*) this0, t6);
+	t7 = 0;
+	x = t7 - x;
+	goto L2;
+	L1:
+	
+	L2:
+	((void (*)(struct System *, int))virtualtable[this0->type*4+3])((struct System*) this0, x);
+	L3:
+		return;
+}
+
+void System_printRecurse(struct System *this0, int x)
+{
+		int t10;
+	int t9;
+	int t11;
+	int shifted;
+	int t12;
+	int t15;
+	int t14;
+	int t13;
+	int digit;
+
+	t10 = 0;
+	t9 = x == t10;
+if (!t9) 	goto L4;
+	
+	return;
+	goto L5;
+	L4:
+	
+	L5:
+	t11 = 10;
+	shifted = x / t11;
+	((void (*)(struct System *, int))virtualtable[this0->type*4+3])((struct System*) this0, shifted);
+	t12 = 48;
+	t15 = 10;
+	t14 = shifted * t15;
+	t13 = x - t14;
+	digit = t12 + t13;
+	((void (*)(struct System *, int))virtualtable[this0->type*4+0])((struct System*) this0, digit);
+		return;
+}
+
+void fact_main(struct fact *this0, struct System *x)
+{
+	struct fact *f;
+	int i;
+		int t16;
+
+	f = allocate_new(1);
+	i = ((int (*)(struct System *))virtualtable[x->type*4+2])((struct System*) x);
+	((void (*)(struct fact *, int))virtualtable[f->type*4+3])((struct fact*) f, i);
+	t16 = ((int (*)(struct fact *))virtualtable[f->type*4+1])((struct fact*) f);
+	((void (*)(struct System *, int))virtualtable[x->type*4+0])((struct System*) x, t16);
+		return;
+}
+
+int fact_factIter(struct fact *this0)
+{
+	int t17;
+	int i;
+	int t18;
+	int f;
+		int t21;
+	int t20;
+	int t19;
+	int t22;
+
+	t17 = 1;
+	i = t17;
+	t18 = 1;
+	f = t18;
+	L6:
+	t21 = 1;
+	t20 = this0->n + t21;
+	t19 = i < t20;
+if (!t19) 	goto L7;
+	f = f * i;
+	t22 = 1;
+	i = i + t22;
+	goto L6;
+	L7:
+	return f;
+}
+
+int fact_factRec(struct fact *this0, int num)
+{
+		int t24;
+	int t23;
+	int t25;
+	int t28;
+	int t27;
+	int t29;
+	int t26;
+
+	t24 = 1;
+	t23 = num == t24;
+if (!t23) 	goto L8;
+	t25 = 1;
+	return t25;
+	goto L9;
+	L8:
+	
+	L9:
+	t28 = 1;
+	t27 = num - t28;
+	t29 = ((int (*)(struct fact *, int))virtualtable[this0->type*4+2])((struct fact*) this0, t27);
+	t26 = t29 * num;
+	return t26;
+}
+
+void fact_setNumber(struct fact *this0, int num)
+{
+	
+	this0->n = num;
+		return;
+}
+
+int main(int argc, const char *argv[])
+{
+	int i;
+	void *systemptr = allocate_new(0);
+	void *baseptr = allocate_new(1);
+	fact_main(baseptr, systemptr);
+}
+										</code>
+									</pre>
+								</li>
+							</ul>
+						<!-- END Sub-nav -->
+						</li>
+						<li>
+							<pre class="uk-panel-scrollable uk-height-large">
+								<code>
+kdomasze% ./a.out
+2
+2
+kdomasze% ./a.out
+6
+720
+kdomasze% ./a.out
+12
+479001600
+								</code>
+							</pre>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- END Chess Black Checkmate Screenshot Modal -->
     </body>
 </html>
