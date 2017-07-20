@@ -1,10 +1,10 @@
 html {
-    font-family: "Times New Roman", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Segoe UI", "Times New Roman", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     background: #fff;
-    color: #000;
+    color: #333;
 }
 
 body {
@@ -12,6 +12,7 @@ body {
     grid-template-columns: 1fr;
     width: 800px;
     margin: 0 auto;
+    padding-bottom: 0.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,11 +23,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     line-height: 1;
-    font-size: 3.75rem;
+    font-size: 2.75rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.95rem;
 }
 
 h3 {
@@ -37,8 +38,23 @@ h4 {
     font-size: 1.25rem;
 }
 
+h5 {
+    font-size: 1.05rem;
+}
+
 ul {
     margin: 0;
+}
+
+li {
+    color: #555;
+}
+
+a:link {
+    color:#4677ce;
+}
+a:visited {
+    color:#2f5496;
 }
 
 .inline-header {
@@ -49,8 +65,44 @@ ul {
 
 .inline-element {
     text-align: right;
+    color: #444;
 }
 
 .page-title {
     text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+}
+
+.section-body {
+    padding-top: 0.5rem;
+}
+
+header + .section-body {
+    padding-top: 0;
+}
+
+@media only screen and (max-width: 825px) {
+    body {
+        width: 95%;
+    }
+
+    nav {
+        font-size: 1rem;
+    }
+
+    .inline-header {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: end;
+    }
+
+    .inline-element {
+        text-align: left;
+    }
+
+    h5 {
+        font-size: 1.025rem;
+    }
 }
