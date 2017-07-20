@@ -1,10 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Kyle Domaszewicz Portfolio</title>
-		<link rel="stylesheet" href="css/main.css" />
+		<meta charset="utf-8">
+
+		<title>Kyle Domaszewicz Resume</title>
+		<meta name="description" content="Kyle Domaszewicz's Resume">
+  		<meta name="author" content="Kyle Domaszewicz">
+		
+        <link rel="stylesheet" href="css/main.css" />
+        
+        <script src="https://use.fontawesome.com/667ec30ef9.js" ></script>
     </head>
     <body>
-		
+        <header class="inline-header">
+			<h1>Kyle Domaszewicz</h1>
+			<nav class="inline-element">
+					<a href="#">Resume</a> | <a href="#">Portfolio</a> | <a href="https://github.com/kdomasze">GitHub Profile</a></a>
+			</nav>
+		</header>
+
+		<main>
+			<header>
+				<h2 class="page-title">Portfolio</h2>
+            </header>
+            
+            <section class="section-wrapper">
+				<header>
+                    <h3>Chess Program</h3>
+                    <dl class="project-details">
+                        <dt>
+                            <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i> A full chess program
+                        </dt>
+                        <dt>
+                            <i class="fa fa-code" aria-hidden="true" title="Main language used"></i> Written in C
+                        </dt>
+                        <dt>
+                            <i class="fa fa-users" aria-hidden="true" description="Team size"></i> Team of 7
+                        </dt>
+                        <dt>
+                            <i class="fa fa-github" aria-hidden="true" description="GitHub repository link"></i> <a href="https://github.com/kdomasze/Chess-Simulator-2014">Source on GitHub</a>
+                        </dt>
+                    </dl>
+				</header>
+
+				<section class="section-body">
+					<header>
+						<h4>Description and Responsibility</h4>
+					</header>
+					<p>
+                        This project's goal was to design and implement a complete chess program with an AI opponent in 5 weeks. My role in the project was to design and implement a UI for the game. My primary goal was to create a user interface that required as little modification of the main game in order to function properly.
+					</p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Design Process</h4>
+					</header>
+					<p>
+                        Initially, I opted to create a text interface to quickly produce a workable output for my fellow team members to utilize while working on their own parts of the project. Once I had completed this task, I moved on to creating a graphical user interface. I opted to utilize the SDL 1.2 as per the suggestion of our professor. After spending some time reading the documentation and experimenting with SDL, I proceeded to implement the new GUI.
+                    </p>
+                    <p>
+                        To ensure the error checking and movement systems my teammates implemented were utilized, early on I designed the code to grab input information from the user and pass it to the core program.
+                    </p>
+                    <p>
+                        After deciding on a design for the UI, I began by implementing the GUI by drawing the chess board itself and aligning the chess pieces. Next, I spent some time working with the event system in SDL to capture mouse clicks from the user. Once I could capture the mouse clicks, I moved onto adding the logic for highlighting the places on the chess board the player selects (along with checks for illegal clicks on the board).
+                    </p>
+                    <p>
+                        Once these core features were completed, I replaced the text-based UI with the graphical one for testing. Once I confirmed it was working as intended, I moved onto creating the menus throughout the program for game setup.
+					</p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Screenshots</h4>
+					</header>
+					<p>
+                        To be implemented.
+					</p>
+				</section>
+			</section>
+		</main>
     </body>
 </html>
