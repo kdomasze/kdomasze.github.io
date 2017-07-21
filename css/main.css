@@ -83,6 +83,10 @@ header + .section-body {
     padding-top: 0;
 }
 
+.portfolio-section-spacing {
+    padding-top: 2.5rem;
+}
+
 .project-details {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -127,7 +131,7 @@ header + .section-body {
 	background: rgba(0,0,0,0.8);
 }
 
-.lightbox img {
+.lightbox img, .lightbox video {
 	/** Pad the lightbox image */
 	max-width: 90%;
 	max-height: 80%;

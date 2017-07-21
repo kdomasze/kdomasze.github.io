@@ -92,7 +92,7 @@
                             <img src="./img/chess/MainMenu.PNG" class="thumbnail" />
                         </a>
                     </section>
-                    
+
                     <!-- lightbox containers -->
                     <a href="#_" class="lightbox" id="chess-black-checkmate">
                         <img src="./img/chess/BlackCheckmate.PNG">
@@ -110,7 +110,215 @@
                         <img src="./img/chess/MainMenu.PNG">
                     </a>
 				</section>
-			</section>
+            </section>
+            
+            <section class="section-wrapper portfolio-section-spacing">
+				<header>
+                    <h3>JLite Compiler</h3>
+                    <dl class="project-details">
+                        <dt>
+                            <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i> A compiler for JLite
+                        </dt>
+                        <dt>
+                            <i class="fa fa-code" aria-hidden="true" title="Main language used"></i> Written in Java
+                        </dt>
+                        <dt>
+                            <i class="fa fa-users" aria-hidden="true" description="Team size"></i> Team of 4
+                        </dt>
+                        <dt>
+                            <i class="fa fa-github" aria-hidden="true" description="GitHub repository link"></i> <a href="https://github.com/kdomasze/JLite-Compiler">Source on GitHub</a>
+                        </dt>
+                    </dl>
+				</header>
+
+				<section class="section-body">
+					<header>
+						<h4>Description and Responsibility</h4>
+					</header>
+					<p>
+                        This project's goal was to create a compiler for a stripped down version of Java in 10 weeks. Ultimately the compiler would take the JLite code and compile it to valid C code, which could then be compiled into a runnable executable. While we initally did have seperate roles in the project, we eventually ended up assisting each other with their parts of the project.
+					</p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Design Process</h4>
+					</header>
+					<p>
+                        For the project, we were initially supplied with a parser for the compiler. We began by implementing a semantic check system into the program in order to ensure the input code was a valid JLite file. After finishing the semantic check system, we moved onto generating an Abstract Syntax Tree (AST) and building symbol tables for each method of the classes. From here, we were able to check for errors relating to the classes and methods.
+                    </p>
+                    <p>
+                        Once we had tested and confirmed the AST was correctly generating and the error checks were working, we moved onto generating the Intermediate Representation (IR) from the AST. We used Three Address Code (essentially a generic assembly language) as our IR. Finally, from this IR, we were able to then generate the final C code.
+					</p>
+                </section>
+
+                <section class="section-body">
+					<header>
+						<h4>Example</h4>
+                    </header>
+
+                    <p>To be implemented</p>
+                </section>
+            </section>
+            
+            <section class="section-wrapper portfolio-section-spacing">
+				<header>
+                    <h3>Home Alarm Project</h3>
+                    <dl class="project-details">
+                        <dt>
+                            <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i> A RPi Home Alarm
+                        </dt>
+                        <dt>
+                            <i class="fa fa-code" aria-hidden="true" title="Main language used"></i> Written in C
+                        </dt>
+                        <dt>
+                            <i class="fa fa-users" aria-hidden="true" description="Team size"></i> Team of 2
+                        </dt>
+                        <dt>
+                            <i class="fa fa-github" aria-hidden="true" description="GitHub repository link"></i> <a href="https://github.com/kdomasze/Home-Alarm-Project">Source on GitHub</a>
+                        </dt>
+                    </dl>
+				</header>
+
+				<section class="section-body">
+					<header>
+						<h4>Description and Responsibility</h4>
+					</header>
+					<p>
+                        This project's goal was to create a home alarm system using a Raspberry Pi and our own custom circuit. The project called for reading data from a few analog sensors (thermistor and light dependent resister) and activating a buzzer when specific cutoff values were exceeded. Responsibility was not split and all development was done as a pair.
+					</p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Design Process</h4>
+					</header>
+					<p>
+                        To begin the project, we worked to read values directly from the ADC. Since the ADC used the SPI protocol, we first did some research into how to utilize it. Once we understood the protocol, we wrote a test program to read data from the ADC which was reading data from a potentiometer.
+                    </p>
+                    <p>
+                        Once we verified that the interface between the ADC and the RPi was good, we moved to expand the code to support one sensor. We initially hard coded the cut-off value for the sensor to ease development. Once we confirmed that the first sensor was working, we added functionality for the system to automatically detect a cutoff depending on the current temperature it senses at start up.
+                    </p>
+                    <p>
+                        After this initial system was working, we added in the second sensor and the buzzer to complete the full alarm.
+                    </p>
+                </section>
+            </section>
+            
+            <section class="section-wrapper">
+				<header>
+                    <h3>Image Lab</h3>
+                    <dl class="project-details">
+                        <dt>
+                            <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i> A set of DIP operations
+                        </dt>
+                        <dt>
+                            <i class="fa fa-code" aria-hidden="true" title="Main language used"></i> Written in C
+                        </dt>
+                        <dt>
+                            <i class="fa fa-users" aria-hidden="true" description="Team size"></i> Solo
+                        </dt>
+                        <dt>
+                            <i class="fa fa-github" aria-hidden="true" description="GitHub repository link"></i> <a href="https://github.com/kdomasze/Image-Labs">Source on GitHub</a>
+                        </dt>
+                    </dl>
+				</header>
+
+				<section class="section-body">
+					<header>
+						<h4>Description and Responsibility</h4>
+					</header>
+					<p>
+                        Excluding the first project, these projects aimed to apply a series of Digital Image Processing (DIP) operations to an input image of the Pixel Portable Map (PPM) format and output those operations to a new file (of the same PPM format). Each project built on the last and ultimately built to processing a video file. The videos were inputed as a YUV file and outputed in the same format.
+                    </p>
+                    <p>
+                        In addition, both the image and video portions of the project had us generating a fractal structure and outputing it both as a single image and as an animated video.
+                    </p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Design Process</h4>
+					</header>
+					<p>
+                        Due to these being much smaller projects and each one designed to build towards the next, the majority of my design decisions rested on properly researching the functions and finding a method of implementation.
+                    </p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Screenshots</h4>
+                    </header>
+                    <!--Thumbnails -->
+                    <section class="section-thumbnails">
+                        <a href="#dip-original">
+                            <img src="./img/dip/UCI_Peter.jpg" class="thumbnail" />
+                        </a>
+                        <a href="#dip-sharpen">
+                            <img src="./img/dip/sharpen.jpg" class="thumbnail" />
+                        </a>
+                        <a href="#dip-poster">
+                            <img src="./img/dip/poster.jpg" class="thumbnail" />
+                        </a>
+                        <a href="#dip-noise">
+                            <img src="./img/dip/noise.jpg" class="thumbnail" />
+                        </a>
+                        <a href="#dip-hmirror">
+                            <img src="./img/dip/hmirror.jpg" class="thumbnail" />
+                        </a>
+                        <a href="#dip-edge">
+                            <img src="./img/dip/edge.jpg" class="thumbnail" />
+                        </a>
+                        <a href="#dip-bw">
+                            <img src="./img/dip/bw.jpg" class="thumbnail" />
+                        </a>
+                        <a href="#dip-aging">
+                            <img src="./img/dip/aging.jpg" class="thumbnail" />
+                        </a>
+                        <a href="#dip-overlayturkey">
+                            <img src="./img/dip/overlayturkey.jpg" class="thumbnail" />
+                        </a>
+                        <a href="#dip-juliaset">
+                            <img src="./img/dip/juliaset.jpg" class="thumbnail" />
+                        </a>
+                    </section>
+
+                    <!-- lightbox containers -->
+                    <a href="#_" class="lightbox" id="dip-original">
+                        <img src="./img/dip/UCI_Peter.jpg">
+                    </a>
+                    <a href="#_" class="lightbox" id="dip-sharpen">
+                        <img src="./img/dip/sharpen.jpg">
+                    </a>
+                    <a href="#_" class="lightbox" id="dip-poster">
+                        <img src="./img/dip/poster.jpg">
+                    </a>
+                    <a href="#_" class="lightbox" id="dip-noise">
+                        <img src="./img/dip/noise.jpg">
+                    </a>
+                    <a href="#_" class="lightbox" id="dip-hmirror">
+                        <img src="./img/dip/hmirror.jpg">
+                    </a>
+                    <a href="#_" class="lightbox" id="dip-edge">
+                        <img src="./img/dip/edge.jpg">
+                    </a>
+                    <a href="#_" class="lightbox" id="dip-bw">
+                        <img src="./img/dip/bw.jpg">
+                    </a>
+                    <a href="#_" class="lightbox" id="dip-aging">
+                        <img src="./img/dip/aging.jpg">
+                    </a>
+                    <a href="#_" class="lightbox" id="dip-overlayturkey">
+                        <img src="./img/dip/overlayturkey.jpg">
+                    </a>
+                    <a href="#_" class="lightbox" id="dip-juliaset">
+                        <video controls preload poster="./img/dip/juliaset.jpg">
+                            <source src="./vid/dip/juliasetv.webm" type='video/webm' />
+                            <source src="./vid/dip/juliasetv.mp4" type='video/mp4' />
+                        </video>
+                    </a>
+				</section>
+            </section>
 		</main>
     </body>
 </html>
