@@ -50,6 +50,10 @@ li {
     color: #555;
 }
 
+a {
+    line-height: 1;
+}
+
 a:link {
     color:#4677ce;
     text-decoration: none;
@@ -100,13 +104,15 @@ header + .section-body {
 }
 
 .project-details dt:last-child {
-    border-right: none;
+    border: none;
 }
 
 .section-thumbnails {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
+    grid-column-gap: .25rem;
+    grid-row-gap: .25rem;
 }
 
 .thumbnail {
@@ -154,6 +160,10 @@ header + .section-body {
     nav {
         font-size: 1rem;
     }
+    
+    h5 {
+        font-size: 1.025rem;
+    }
 
     .inline-header {
         display: grid;
@@ -166,7 +176,22 @@ header + .section-body {
         text-align: left;
     }
 
-    h5 {
-        font-size: 1.025rem;
+    .project-details {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        text-align: center;
+    }
+
+    .project-details dt {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-right: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-color: #999;
+    }
+
+    .fa {
+        padding-right: 0.5rem;
     }
 }
