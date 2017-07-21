@@ -84,20 +84,67 @@ a:visited {
 }
 
 /** Project Details Summary Formatting **/
+.summary-icon {
+    grid-area: summary-icon;
+}
+
+.code-icon {
+    grid-area: code-icon;
+}
+
+.team-icon {
+    grid-area: team-icon;
+}
+
+.repo-icon {
+    grid-area: repo-icon;
+}
+
+.summary {
+    grid-area: summary;
+}
+
+.code {
+    grid-area: code;
+}
+
+.team {
+    grid-area: team;
+}
+
+.repo {
+    grid-area: repo;
+}
+
+
 .project-details {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "summary-icon code-icon team-icon repo-icon"
+    "summary code team repo";
     text-align: center;
 }
 
-.project-details dt {
+.project-details dd, .project-details dt {
     border-right-width: 1px;
     border-right-style: solid;
     border-color: #999;
 }
 
-.project-details dt:last-child {
+.project-details dd:last-of-type, .project-details dt:last-of-type {
     border: none;
+}
+
+dt {
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+dd {
+    width: auto;
+    padding: 0;
+    margin: 0;
 }
 
 /** Thumbnail Formatting **/
@@ -174,7 +221,6 @@ header + .section-body {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        align-items: end;
     }
 
     .inline-element {
@@ -183,18 +229,28 @@ header + .section-body {
 
     /** Project Details Summary Formatting **/
     .project-details {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        text-align: center;
+         grid-template-areas:
+            "summary-icon"
+            "summary"
+            "code-icon"
+            "code"
+            "team-icon"
+            "team"
+            "repo-icon"
+            "repo";
     }
 
-    .project-details dt {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+    .project-details dd {
+        padding-bottom: 0.5rem;
         border-right: none;
         border-bottom-width: 1px;
         border-bottom-style: solid;
         border-color: #999;
+    }
+
+    .project-details dt {
+        padding-top: 0.5rem;
+        border-right: none;
     }
 
     /** White Space Fixes **/
