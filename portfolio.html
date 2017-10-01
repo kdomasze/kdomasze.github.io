@@ -23,6 +23,91 @@
 			<header>
 				<h2 class="page-title">Portfolio</h2>
             </header>
+			
+			<section class="section-wrapper">
+				<header>
+                    <h3>Conway's Game of Life</h3>
+                <dl class="project-details">
+                        <dt class="summary-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
+                        </dt>
+                        <dd class="summary">
+                            A small life simulation
+                        </dd>
+                        <dt class="code-icon">
+                            <i class="fa fa-code" aria-hidden="true" title="Main language used"></i>
+                        </dt>
+                        <dd class="code">
+                            Written in C++
+                        </dd>
+                        <dt class="team-icon">
+                            <i class="fa fa-users" aria-hidden="true" title="Team size"></i>
+                        </dt>
+                        <dd class="team">
+                            Solo
+                        </dd>
+                        <dt class="repo-icon">
+                            <i class="fa fa-github" aria-hidden="true" title="GitHub repository link"></i>
+                        </dt>
+                        <dd class="repo">
+                            <a href="https://github.com/kdomasze/Conway-s-Game-Of-Life">Source on GitHub</a>
+                        </dd>
+                    </dl>
+				</header>
+
+				<section class="section-body">
+					<header>
+						<h4>Description and Responsibility</h4>
+					</header>
+					<p>
+                        The goal of this project was to practice graphics and C++ programming, and learn about cellular automata by implementing <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>.
+					</p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Design Process</h4>
+					</header>
+					<p>
+                        After deciding on a graphics library (<a href="https://www.sfml-dev.org/index.php">SFML</a>), my first goal was to create a grid pattern on the screen. I wanted to make the pattern generate dynamically when the program loaded rather than in a hard-coded fashion to allow for more or less dense grids in the future. Once the grid was completed, I added interactivity to it to allow the user to toggle cells on or off.
+                    </p>
+					<p>
+						Once the grid was complete, I began work on the actual simulation. I initially made the mistake in iterating and modifying the grid at the same time, which lead to the simulation not working at all. After some additional research, I learned that each step in the simulation requires iterating over an unchanged copy of the grid, then applying those changes to the displayed grid. Once this was correctly implemented, the simulation was working as expected.
+					</p>
+					<p>
+						One issue after completing this was the simulation was moving way faster than what was usable. I implemented (by making use of code by one of SFML's team members, Mario) this <a href="https://en.sfml-dev.org/forums/index.php?topic=6923.msg45722#msg45722">timestep solution</a>. This brought the simulation to acceptable speeds.
+					</p>
+					<p>
+						After some changes (such as allowing the simulation to wrap around the window), I restructured the project's code. From the problems I had with implementing the simulation, some parts of the grid and simulation code were mixed. In addition, the main function was cluttered with SFML rendering necessities and my own simulation logic. After making these changes, it was a lot easier to understand the logic of the system at a glance and make changes.
+					</p>
+					<p>
+						The final changes I made were to add randomly generated fills to the grid and add a camera to zoom and pan the simulation.
+					</p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Screenshots</h4>
+                    </header>
+                    <!--Thumbnails -->
+                    <aside class="section-thumbnails">
+                        <a href="#conway-random">
+                            <img src="./img/conway/random.png" class="thumbnail" alt="Random grid example" />
+                        </a>
+						<a href="#conway-gun">
+                            <img src="./img/conway/GosperGliderGun.png" class="thumbnail" alt="Gosper Glider Gun example" />
+                        </a>
+                    </aside>
+
+                    <!-- lightbox containers -->
+                    <a href="#_" class="lightbox" id="conway-random" aria-hidden="true">
+                        <img src="./img/conway/random.png" alt="Randomized grid example" />
+                    </a>
+					<a href="#_" class="lightbox" id="conway-gun" aria-hidden="true">
+                        <img src="./img/conway/GosperGliderGun.png" alt="Gosper Glider Gun example" />
+                    </a>
+				</section>
+            </section>
             
             <section class="section-wrapper">
 				<header>
