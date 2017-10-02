@@ -26,6 +26,85 @@
 			
 			<section class="section-wrapper">
 				<header>
+                    <h3>Calculator</h3>
+                <dl class="project-details">
+                        <dt class="summary-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
+                        </dt>
+                        <dd class="summary">
+                            A simple calculator
+                        </dd>
+                        <dt class="code-icon">
+                            <i class="fa fa-code" aria-hidden="true" title="Main language used"></i>
+                        </dt>
+                        <dd class="code">
+                            Written in C#/.NET
+                        </dd>
+                        <dt class="team-icon">
+                            <i class="fa fa-users" aria-hidden="true" title="Team size"></i>
+                        </dt>
+                        <dd class="team">
+                            Solo
+                        </dd>
+                        <dt class="repo-icon">
+                            <i class="fa fa-github" aria-hidden="true" title="GitHub repository link"></i>
+                        </dt>
+                        <dd class="repo">
+                            <a href="https://github.com/kdomasze/Calculator">Source on GitHub</a>
+                        </dd>
+                    </dl>
+				</header>
+
+				<section class="section-body">
+					<header>
+						<h4>Description and Responsibility</h4>
+					</header>
+					<p>
+                        The goal of this project was to learn GUI programming with C#/.NET using WinForms by creating a simple calculator program.
+					</p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Design Process</h4>
+					</header>
+					<p>
+                        I began by implementing the layout of the calculator in the GUI editor for Visual Studio. This process, overall was pretty straight forward but required some research into how to keep a responsive design when the window resizes, and some trial and error in maintaining a design that did not break at larger sizes.
+                    </p>
+					<p>
+						After implementing the GUI, I moved to adding interactivity to the buttons. First, I made it so the numbered buttons would record their values internally and display it on the output. After this, I added the <em>&plusmn;</em> support for toggling the sign of the current value displayed and the decimal point. Both were straight forward, but, required tracking the state of the current number to determine the correct operation of the button.
+					</p>
+					<p>
+						Next, support for the back button was added. I tried to emulate the functionality of the built-in Windows calculator as close as possible, which required handling different input cases separately. For instance, a number such as <em>123</em> can simply become <em>12</em>, but, <em>1</em> need to become <em>0</em> and not a blank space. Similarly, if it is a single number but negative (i.e. <em>-5</em>), the number must become <em>0</em> and not <em>-0</em> or just <em>-</em>.
+					</p>
+					<p>
+						After handling the back button, I implemented the operators and outputting the result. The way this was tracked was when a user has finished inputting a number and presses an operator (i.e. <em>+</em>) the number is stored in a list, the operation is also stored in its own separate list, and the output text box is reset. The user can then repeat this as many times as they like with other operators until they hit the equals button. This will then loop through both lists and perform the calculation in order of typed (not in correct mathematical order). The result will then be displayed and become the currently displayed number, ready for additional operations.
+					</p>
+					<p>
+						The final function implemented were the clear and clear entry button. This was straight forward as it only required either clearing the entire list of entries and operations or just clearing the currently selected entry.
+					</p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Screenshots</h4>
+                    </header>
+                    <!--Thumbnails -->
+                    <aside class="section-thumbnails">
+                        <a href="#calculator-calculator">
+                            <img src="./img/calculator/calculator.png" class="thumbnail" alt="Calculator example" />
+                        </a>
+                    </aside>
+
+                    <!-- lightbox containers -->
+                    <a href="#_" class="lightbox" id="calculator-calculator" aria-hidden="true">
+                        <img src="./img/calculator/calculator.png" alt="Calculator example" />
+                    </a>
+				</section>
+            </section>
+			
+			<section class="section-wrapper">
+				<header>
                     <h3>FizzBuzz Extended</h3>
                 <dl class="project-details">
                         <dt class="summary-icon">
