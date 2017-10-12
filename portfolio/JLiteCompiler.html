@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+
+		<title>Kyle Domaszewicz Resume</title>
+		<meta name="description" content="Kyle Domaszewicz's Resume">
+  		<meta name="author" content="Kyle Domaszewicz">
+		
+        <link rel="stylesheet" href="../css/main.css" />
+        
+        <script type="text/javascript" async=true src="https://use.fontawesome.com/667ec30ef9.js" ></script>
+    </head>
+    <body>
+		<header class="inline-header page-header">
+			<h1>Kyle Domaszewicz</h1>
+			<nav class="inline-element">
+					<a href="./index.html">Resume</a> | <a href="../portfolio.html">Portfolio</a> | <a href="https://github.com/kdomasze">GitHub Profile</a>
+			</nav>
+		</header>
+		<main>
+			<header>
+				<h2 class="page-title">JLite Compiler</h2>
+            </header>
+            
+            <section class="section-wrapper">
+				<header>
+					<dl class="project-details">
+                        <dt class="summary-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
+                        </dt>
+                        <dd class="summary">
+                            A compiler for JLite
+                        </dd>
+                        <dt class="code-icon">
+                            <i class="fa fa-code" aria-hidden="true" title="Main language used"></i>
+                        </dt>
+                        <dd class="code">
+                            Written in Java
+                        </dd>
+                        <dt class="team-icon">
+                            <i class="fa fa-users" aria-hidden="true" title="Team size"></i>
+                        </dt>
+                        <dd class="team">
+                            Team of 4
+                        </dd>
+                        <dt class="repo-icon">
+                            <i class="fa fa-github" aria-hidden="true" title="GitHub repository link"></i> 
+                        </dt>
+                        <dd class="repo">
+                            <a href="https://github.com/kdomasze/JLite-Compiler">Source on GitHub</a>
+                        </dd>
+                    </dl>
+				</header>
+
+				<section class="section-body">
+					<header>
+						<h4>Description and Responsibility</h4>
+					</header>
+					<p>
+                        This project's goal was to create a compiler for a stripped down version of Java in 10 weeks. Ultimately the compiler would take the JLite code and compile it to valid C code, which could then be compiled into a runnable executable. While we initally did have seperate roles in the project, we eventually ended up assisting each other with their parts of the project.
+					</p>
+                </section>
+                
+                <section class="section-body">
+					<header>
+						<h4>Design Process</h4>
+					</header>
+					<p>
+                        For the project, we were initially supplied with a parser for the compiler. We began by implementing a semantic check system into the program in order to ensure the input code was a valid JLite file. After finishing the semantic check system, we moved onto generating an Abstract Syntax Tree (AST) and building symbol tables for each method of the classes. From here, we were able to check for errors relating to the classes and methods.
+                    </p>
+                    <p>
+                        Once we had tested and confirmed the AST was correctly generating and the error checks were working, we moved onto generating the Intermediate Representation (IR) from the AST. We used Three Address Code (essentially a generic assembly language) as our IR. Finally, from this IR, we were able to then generate the final C code.
+					</p>
+                </section>
+            </section>
+		</main>
+    </body>
+</html>

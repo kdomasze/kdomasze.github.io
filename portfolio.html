@@ -26,8 +26,50 @@
 			
 			<section class="section-wrapper">
 				<header>
-                    <h3>Calculator</h3>
-                <dl class="project-details">
+					<dl class="project-details extended">
+						<dt class="project-name">
+							<h3>FizzBuzz Extended</h3>
+						</dt>
+						<dd class="project-link">
+							<a href="./portfolio/FizzBuzzExtended.html">Details</a>
+						</dd>
+                        <dt class="summary-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
+                        </dt>
+                        <dd class="summary">
+                            FizzBuzz overkill
+                        </dd>
+                        <dt class="code-icon">
+                            <i class="fa fa-code" aria-hidden="true" title="Main language used"></i>
+                        </dt>
+                        <dd class="code">
+                            Written in C#/.NET
+                        </dd>
+                        <dt class="team-icon">
+                            <i class="fa fa-users" aria-hidden="true" title="Team size"></i>
+                        </dt>
+                        <dd class="team">
+                            Solo
+                        </dd>
+                        <dt class="repo-icon">
+                            <i class="fa fa-github" aria-hidden="true" title="GitHub repository link"></i>
+                        </dt>
+                        <dd class="repo">
+                            <a href="https://github.com/kdomasze/FizzBuzz-Extended">Source on GitHub</a>
+                        </dd>
+                    </dl>
+				</header>
+			</section>
+			
+			<section class="section-wrapper">
+				<header>
+					<dl class="project-details extended">
+						<dt class="project-name">
+							<h3>Calculator</h3>
+						</dt>
+						<dd class="project-link">
+							<a href="./portfolio/Calculator.html">Details</a>
+						</dd>
                         <dt class="summary-icon">
                             <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
                         </dt>
@@ -54,109 +96,17 @@
                         </dd>
                     </dl>
 				</header>
-
-				<section class="section-body">
-					<header>
-						<h4>Description and Responsibility</h4>
-					</header>
-					<p>
-                        The goal of this project was to learn GUI programming with C#/.NET using WinForms by creating a simple calculator program.
-					</p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Design Process</h4>
-					</header>
-					<p>
-                        I began by implementing the layout of the calculator in the GUI editor for Visual Studio. This process, overall was pretty straight forward but required some research into how to keep a responsive design when the window resizes, and some trial and error in maintaining a design that did not break at larger sizes.
-                    </p>
-					<p>
-						After implementing the GUI, I moved to adding interactivity to the buttons. First, I made it so the numbered buttons would record their values internally and display it on the output. After this, I added the <em>&plusmn;</em> support for toggling the sign of the current value displayed and the decimal point. Both were straight forward, but, required tracking the state of the current number to determine the correct operation of the button.
-					</p>
-					<p>
-						Next, support for the back button was added. I tried to emulate the functionality of the built-in Windows calculator as close as possible, which required handling different input cases separately. For instance, a number such as <em>123</em> can simply become <em>12</em>, but, <em>1</em> need to become <em>0</em> and not a blank space. Similarly, if it is a single number but negative (i.e. <em>-5</em>), the number must become <em>0</em> and not <em>-0</em> or just <em>-</em>.
-					</p>
-					<p>
-						After handling the back button, I implemented the operators and outputting the result. The way this was tracked was when a user has finished inputting a number and presses an operator (i.e. <em>+</em>) the number is stored in a list, the operation is also stored in its own separate list, and the output text box is reset. The user can then repeat this as many times as they like with other operators until they hit the equals button. This will then loop through both lists and perform the calculation in order of typed (not in correct mathematical order). The result will then be displayed and become the currently displayed number, ready for additional operations.
-					</p>
-					<p>
-						The final function implemented were the clear and clear entry button. This was straight forward as it only required either clearing the entire list of entries and operations or just clearing the currently selected entry.
-					</p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Screenshots</h4>
-                    </header>
-                    <!--Thumbnails -->
-                    <aside class="section-thumbnails">
-                        <a href="#calculator-calculator">
-                            <img src="./img/calculator/calculator.png" class="thumbnail" alt="Calculator example" />
-                        </a>
-                    </aside>
-
-                    <!-- lightbox containers -->
-                    <a href="#_" class="lightbox" id="calculator-calculator" aria-hidden="true">
-                        <img src="./img/calculator/calculator.png" alt="Calculator example" />
-                    </a>
-				</section>
-            </section>
+			</section>
 			
 			<section class="section-wrapper">
 				<header>
-                    <h3>FizzBuzz Extended</h3>
-                <dl class="project-details">
-                        <dt class="summary-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
-                        </dt>
-                        <dd class="summary">
-                            FizzBuzz with additional features
-                        </dd>
-                        <dt class="code-icon">
-                            <i class="fa fa-code" aria-hidden="true" title="Main language used"></i>
-                        </dt>
-                        <dd class="code">
-                            Written in C#/.NET
-                        </dd>
-                        <dt class="team-icon">
-                            <i class="fa fa-users" aria-hidden="true" title="Team size"></i>
-                        </dt>
-                        <dd class="team">
-                            Solo
-                        </dd>
-                        <dt class="repo-icon">
-                            <i class="fa fa-github" aria-hidden="true" title="GitHub repository link"></i>
-                        </dt>
-                        <dd class="repo">
-                            <a href="https://github.com/kdomasze/FizzBuzz-Extended">Source on GitHub</a>
-                        </dd>
-                    </dl>
-				</header>
-
-				<section class="section-body">
-					<header>
-						<h4>Description and Responsibility</h4>
-					</header>
-					<p>
-                        FizzBuzz Extended is an implementation of FizzBuzz in C#/.NET that included a configuration file to define the range and text replacements. The goal of this project was to introduce myself to .NET programming, practice text parsing, and start a project of adding features to the classic FizzBuzz problem that are unnecessary.
-					</p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Design Process</h4>
-					</header>
-					<p>
-                        The overall design and implementation of FizzBuzz Extended was straight forward. I initially implemented FizzBuzz as originally intended as a starting base to extend off of. From here, I worked on a simple parser for parsing a custom text file format that defines the range FizzBuzz would loop through and the numbers it would replace on. Once I accomplished this, the initial vision for the project was completed.
-                    </p>
-                </section>
-            </section>
-			
-			<section class="section-wrapper">
-				<header>
-                    <h3>Conway's Game of Life</h3>
-                <dl class="project-details">
+					<dl class="project-details extended">
+						<dt class="project-name">
+							<h3>Conway's Game of Life</h3>
+						</dt>
+						<dd class="project-link">
+							<a href="./portfolio/ConwaysGameOfLife.html">Details</a>
+						</dd>
                         <dt class="summary-icon">
                             <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
                         </dt>
@@ -183,65 +133,17 @@
                         </dd>
                     </dl>
 				</header>
-
-				<section class="section-body">
-					<header>
-						<h4>Description and Responsibility</h4>
-					</header>
-					<p>
-                        The goal of this project was to practice graphics and C++ programming, and learn about cellular automata by implementing <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>.
-					</p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Design Process</h4>
-					</header>
-					<p>
-                        After deciding on a graphics library (<a href="https://www.sfml-dev.org/index.php">SFML</a>), my first goal was to create a grid pattern on the screen. I wanted to make the pattern generate dynamically when the program loaded rather than in a hard-coded fashion to allow for more or less dense grids in the future. Once the grid was completed, I added interactivity to it to allow the user to toggle cells on or off.
-                    </p>
-					<p>
-						Once the grid was complete, I began work on the actual simulation. I initially made the mistake in iterating and modifying the grid at the same time, which lead to the simulation not working at all. After some additional research, I learned that each step in the simulation requires iterating over an unchanged copy of the grid, then applying those changes to the displayed grid. Once this was correctly implemented, the simulation was working as expected.
-					</p>
-					<p>
-						One issue after completing this was the simulation was moving way faster than what was usable. I implemented (by making use of code by one of SFML's team members, Mario) this <a href="https://en.sfml-dev.org/forums/index.php?topic=6923.msg45722#msg45722">timestep solution</a>. This brought the simulation to acceptable speeds.
-					</p>
-					<p>
-						After some changes (such as allowing the simulation to wrap around the window), I restructured the project's code. From the problems I had with implementing the simulation, some parts of the grid and simulation code were mixed. In addition, the main function was cluttered with SFML rendering necessities and my own simulation logic. After making these changes, it was a lot easier to understand the logic of the system at a glance and make changes.
-					</p>
-					<p>
-						The final changes I made were to add randomly generated fills to the grid and add a camera to zoom and pan the simulation.
-					</p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Screenshots</h4>
-                    </header>
-                    <!--Thumbnails -->
-                    <aside class="section-thumbnails">
-                        <a href="#conway-random">
-                            <img src="./img/conway/random.png" class="thumbnail" alt="Random grid example" />
-                        </a>
-						<a href="#conway-gun">
-                            <img src="./img/conway/GosperGliderGun.png" class="thumbnail" alt="Gosper Glider Gun example" />
-                        </a>
-                    </aside>
-
-                    <!-- lightbox containers -->
-                    <a href="#_" class="lightbox" id="conway-random" aria-hidden="true">
-                        <img src="./img/conway/random.png" alt="Randomized grid example" />
-                    </a>
-					<a href="#_" class="lightbox" id="conway-gun" aria-hidden="true">
-                        <img src="./img/conway/GosperGliderGun.png" alt="Gosper Glider Gun example" />
-                    </a>
-				</section>
-            </section>
-            
-            <section class="section-wrapper">
+			</section>
+			
+			<section class="section-wrapper">
 				<header>
-                    <h3>Chess Program</h3>
-                <dl class="project-details">
+					<dl class="project-details extended">
+						<dt class="project-name">
+							<h3>Chess Program</h3>
+						</dt>
+						<dd class="project-link">
+							<a href="./portfolio/ChessProgram.html">Details</a>
+						</dd>
                         <dt class="summary-icon">
                             <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
                         </dt>
@@ -268,80 +170,17 @@
                         </dd>
                     </dl>
 				</header>
-
-				<section class="section-body">
-					<header>
-						<h4>Description and Responsibility</h4>
-					</header>
-					<p>
-                        This project's goal was to design and implement a complete chess program with an AI opponent in 5 weeks. My role in the project was to design and implement a UI for the game. My primary goal was to create a user interface that required as little modification of the main game in order to function properly.
-					</p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Design Process</h4>
-					</header>
-					<p>
-                        Initially, I opted to create a text interface to quickly produce a workable output for my fellow team members to utilize while working on their own parts of the project. Once I had completed this task, I moved on to creating a graphical user interface. I opted to utilize the SDL 1.2 as per the suggestion of our professor. After spending some time reading the documentation and experimenting with SDL, I proceeded to implement the new GUI.
-                    </p>
-                    <p>
-                        To ensure the error checking and movement systems my teammates implemented were utilized, early on I designed the code to grab input information from the user and pass it to the core program.
-                    </p>
-                    <p>
-                        After deciding on a design for the UI, I began by implementing the GUI by drawing the chess board itself and aligning the chess pieces. Next, I spent some time working with the event system in SDL to capture mouse clicks from the user. Once I could capture the mouse clicks, I moved onto adding the logic for highlighting the places on the chess board the player selects (along with checks for illegal clicks on the board).
-                    </p>
-                    <p>
-                        Once these core features were completed, I replaced the text-based UI with the graphical one for testing. Once I confirmed it was working as intended, I moved onto creating the menus throughout the program for game setup.
-					</p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Screenshots</h4>
-                    </header>
-                    <!--Thumbnails -->
-                    <aside class="section-thumbnails">
-                        <a href="#chess-black-checkmate">
-                            <img src="./img/chess/BlackCheckmate.PNG" class="thumbnail" alt="Black checkmate example" />
-                        </a>
-                        <a href="#chess-choose-color">
-                            <img src="./img/chess/ChooseColor.PNG" class="thumbnail" alt="Choose color menu" />
-                        </a>
-                        <a href="#chess-choose-difficulty">
-                            <img src="./img/chess/ChooseDifficulty.PNG" class="thumbnail" alt="Choose difficulty menu" />
-                        </a>
-                        <a href="#chess-game-in-progress">
-                            <img src="./img/chess/GameInProgress.PNG" class="thumbnail" alt="Game in progress example" />
-                        </a>
-                        <a href="#chess-main-menu">
-                            <img src="./img/chess/MainMenu.PNG" class="thumbnail" alt="Main menu" />
-                        </a>
-                    </aside>
-
-                    <!-- lightbox containers -->
-                    <a href="#_" class="lightbox" id="chess-black-checkmate" aria-hidden="true">
-                        <img src="./img/chess/BlackCheckmate.PNG" alt="Black checkmate example" />
-                    </a>
-                    <a href="#_" class="lightbox" id="chess-choose-color" aria-hidden="true">
-                        <img src="./img/chess/ChooseColor.PNG" alt="Choose color menu" />
-                    </a>
-                    <a href="#_" class="lightbox" id="chess-choose-difficulty" aria-hidden="true">
-                        <img src="./img/chess/ChooseDifficulty.PNG" alt="Choose difficulty menu" />
-                    </a>
-                    <a href="#_" class="lightbox" id="chess-game-in-progress" aria-hidden="true">
-                        <img src="./img/chess/GameInProgress.PNG" alt="Game in progress example" />
-                    </a>
-                    <a href="#_" class="lightbox" id="chess-main-menu" aria-hidden="true">
-                        <img src="./img/chess/MainMenu.PNG" alt="Main menu" />
-                    </a>
-				</section>
-            </section>
-            
-            <section class="section-wrapper portfolio-section-spacing">
+			</section>
+			
+			<section class="section-wrapper">
 				<header>
-                    <h3>JLite Compiler</h3>
-                    <dl class="project-details">
+					<dl class="project-details extended">
+						<dt class="project-name">
+							<h3>JLite Compiler</h3>
+						</dt>
+						<dd class="project-link">
+							<a href="./portfolio/JLiteCompiler.html">Details</a>
+						</dd>
                         <dt class="summary-icon">
                             <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
                         </dt>
@@ -368,33 +207,17 @@
                         </dd>
                     </dl>
 				</header>
-
-				<section class="section-body">
-					<header>
-						<h4>Description and Responsibility</h4>
-					</header>
-					<p>
-                        This project's goal was to create a compiler for a stripped down version of Java in 10 weeks. Ultimately the compiler would take the JLite code and compile it to valid C code, which could then be compiled into a runnable executable. While we initally did have seperate roles in the project, we eventually ended up assisting each other with their parts of the project.
-					</p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Design Process</h4>
-					</header>
-					<p>
-                        For the project, we were initially supplied with a parser for the compiler. We began by implementing a semantic check system into the program in order to ensure the input code was a valid JLite file. After finishing the semantic check system, we moved onto generating an Abstract Syntax Tree (AST) and building symbol tables for each method of the classes. From here, we were able to check for errors relating to the classes and methods.
-                    </p>
-                    <p>
-                        Once we had tested and confirmed the AST was correctly generating and the error checks were working, we moved onto generating the Intermediate Representation (IR) from the AST. We used Three Address Code (essentially a generic assembly language) as our IR. Finally, from this IR, we were able to then generate the final C code.
-					</p>
-                </section>
-            </section>
-            
-            <section class="section-wrapper">
+			</section>
+			
+			<section class="section-wrapper">
 				<header>
-                    <h3>Home Alarm Project</h3>
-                    <dl class="project-details">
+                    <dl class="project-details extended">
+						<dt class="project-name">
+							<h3>Home Alarm Project</h3>
+						</dt>
+						<dd class="project-link">
+							<a href="./portfolio/JLiteCompiler.html">Details</a>
+						</dd>
                         <dt class="summary-icon">
                             <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
                         </dt>
@@ -421,36 +244,17 @@
                         </dd>
                     </dl>
 				</header>
-
-				<section class="section-body">
-					<header>
-						<h4>Description and Responsibility</h4>
-					</header>
-					<p>
-                        This project's goal was to create a home alarm system using a Raspberry Pi and our own custom circuit. The project called for reading data from a few analog sensors (thermistor and light dependent resister) and activating a buzzer when specific cutoff values were exceeded. Responsibility was not split and all development was done as a pair.
-					</p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Design Process</h4>
-					</header>
-					<p>
-                        To begin the project, we worked to read values directly from the ADC. Since the ADC used the SPI protocol, we first did some research into how to utilize it. Once we understood the protocol, we wrote a test program to read data from the ADC which was reading data from a potentiometer.
-                    </p>
-                    <p>
-                        Once we verified that the interface between the ADC and the RPi was good, we moved to expand the code to support one sensor. We initially hard coded the cut-off value for the sensor to ease development. Once we confirmed that the first sensor was working, we added functionality for the system to automatically detect a cutoff depending on the current temperature it senses at start up.
-                    </p>
-                    <p>
-                        After this initial system was working, we added in the second sensor and the buzzer to complete the full alarm.
-                    </p>
-                </section>
-            </section>
+			</section>
             
             <section class="section-wrapper">
 				<header>
-                    <h3>Image Lab</h3>
-                    <dl class="project-details">
+                    <dl class="project-details extended">
+						<dt class="project-name">
+							<h3>Image Lab</h3>
+						</dt>
+						<dd class="project-link">
+							<a href="./portfolio/ImageLab.html">Details</a>
+						</dd>
                         <dt class="summary-icon">
                             <i class="fa fa-info-circle" aria-hidden="true" title="Short project description"></i>
                         </dt>
@@ -477,101 +281,6 @@
                         </dd>
                     </dl>
 				</header>
-
-				<section class="section-body">
-					<header>
-						<h4>Description and Responsibility</h4>
-					</header>
-					<p>
-                        Excluding the first project, these projects aimed to apply a series of Digital Image Processing (DIP) operations to an input image of the Pixel Portable Map (PPM) format and output those operations to a new file (of the same PPM format). Each project built on the last and ultimately built to processing a video file. The videos were inputed as a YUV file and outputed in the same format.
-                    </p>
-                    <p>
-                        In addition, both the image and video portions of the project had us generating a fractal structure and outputing it both as a single image and as an animated video.
-                    </p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Design Process</h4>
-					</header>
-					<p>
-                        Due to these being much smaller projects and each one designed to build towards the next, the majority of my design decisions rested on properly researching the functions and finding a method of implementation.
-                    </p>
-                </section>
-                
-                <section class="section-body">
-					<header>
-						<h4>Screenshots</h4>
-                    </header>
-                    <!--Thumbnails -->
-                    <aside class="section-thumbnails">
-                        <a href="#dip-original">
-                            <img src="./img/dip/UCI_Peter.jpg" class="thumbnail" alt="Original image" />
-                        </a>
-                        <a href="#dip-sharpen">
-                            <img src="./img/dip/sharpen.jpg" class="thumbnail" alt="Sharpen DIP Example" />
-                        </a>
-                        <a href="#dip-poster">
-                            <img src="./img/dip/poster.jpg" class="thumbnail" alt="Posterize DIP Example" />
-                        </a>
-                        <a href="#dip-noise">
-                            <img src="./img/dip/noise.jpg" class="thumbnail" alt="Noise DIP Example" />
-                        </a>
-                        <a href="#dip-hmirror">
-                            <img src="./img/dip/hmirror.jpg" class="thumbnail" alt="Horizontal Mirror DIP Example" />
-                        </a>
-                        <a href="#dip-edge">
-                            <img src="./img/dip/edge.jpg" class="thumbnail" alt="Edge DIP Example" />
-                        </a>
-                        <a href="#dip-bw">
-                            <img src="./img/dip/bw.jpg" class="thumbnail" alt="Black and White DIP Example" />
-                        </a>
-                        <a href="#dip-aging">
-                            <img src="./img/dip/aging.jpg" class="thumbnail" alt="Aging DIP Example" />
-                        </a>
-                        <a href="#dip-overlayturkey">
-                            <img src="./img/dip/overlayturkey.jpg" class="thumbnail" alt="Overlay DIP Example" />
-                        </a>
-                        <a href="#dip-juliaset">
-                            <img src="./img/dip/juliaset.jpg" class="thumbnail" alt="Juliaset Example" />
-                        </a>
-                    </aside>
-
-                    <!-- lightbox containers -->
-                    <a href="#_" class="lightbox" id="dip-original" aria-hidden="true">
-                        <img src="./img/dip/UCI_Peter.jpg" alt="Original image">
-                    </a>
-                    <a href="#_" class="lightbox" id="dip-sharpen" aria-hidden="true">
-                        <img src="./img/dip/sharpen.jpg" alt="Sharpen DIP Example">
-                    </a>
-                    <a href="#_" class="lightbox" id="dip-poster" aria-hidden="true">
-                        <img src="./img/dip/poster.jpg" alt="Posterize DIP Example">
-                    </a>
-                    <a href="#_" class="lightbox" id="dip-noise" aria-hidden="true">
-                        <img src="./img/dip/noise.jpg" alt="Noise DIP Example">
-                    </a>
-                    <a href="#_" class="lightbox" id="dip-hmirror" aria-hidden="true">
-                        <img src="./img/dip/hmirror.jpg" alt="Horizontal Mirror DIP Example">
-                    </a>
-                    <a href="#_" class="lightbox" id="dip-edge" aria-hidden="true">
-                        <img src="./img/dip/edge.jpg" alt="Edge DIP Example">
-                    </a>
-                    <a href="#_" class="lightbox" id="dip-bw" aria-hidden="true">
-                        <img src="./img/dip/bw.jpg" alt="Black and White DIP Example">
-                    </a>
-                    <a href="#_" class="lightbox" id="dip-aging" aria-hidden="true">
-                        <img src="./img/dip/aging.jpg" alt="Aging DIP Example">
-                    </a>
-                    <a href="#_" class="lightbox" id="dip-overlayturkey" aria-hidden="true">
-                        <img src="./img/dip/overlayturkey.jpg" alt="Overlay DIP Example">
-                    </a>
-                    <a href="#_" class="lightbox" id="dip-juliaset" aria-hidden="true">
-                        <video preload autoplay controls poster="./img/dip/juliaset.jpg">
-                            <source src="https://github.com/kdomasze/kdomasze.github.io/blob/master/vid/dip/juliasetv.webm?raw=true" type='video/webm' />
-                            <source src="https://github.com/kdomasze/kdomasze.github.io/blob/master/vid/dip/Juliasetv.mp4?raw=true" type='video/mp4' />
-                        </video>
-                    </a>
-				</section>
             </section>
 		</main>
     </body>

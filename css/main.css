@@ -127,6 +127,15 @@ a:visited {
     text-align: center;
 }
 
+.project-details.extended {
+    display: grid;
+    grid-template-columns: 30% 20% 20% 10% 20%;
+	grid-template-areas:
+    "project-name summary-icon code-icon team-icon repo-icon"
+    "project-link summary code team repo";
+    text-align: center;
+}
+
 .project-details dd, .project-details dt {
     border-right-width: 1px;
     border-right-style: solid;
